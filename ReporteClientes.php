@@ -22,7 +22,7 @@ if ($setup->db) {
         $ventas[] = $fila;
     }
 
-    $nombre_cliente = $ventas[0]['razonsocial'];
+    $cliente = $ventas[0]['razonsocial'];
 
     // Agrupar datos por año
     $ventasPorAno = [];
@@ -35,9 +35,15 @@ if ($setup->db) {
         $ventasPorAno[$ano] += $venta['total'];
     }
 
-    // Generar gráfico
-    $imagenAncho = 600;  // Aumento el ancho de la imagen para acomodar más años
-    $imagenAlto = 300;
+    // Configuración del gráfico
+    $cantidadBarras = count($ventasPorAno);
+    $anchoBarra = 40;
+    $espacio = 20;
+    $totalAnchoBarras = $cantidadBarras * $anchoBarra + ($cantidadBarras - 1) * $espacio;
+
+
+    $imagenAncho = max(600, $totalAnchoBarras + 20); 
+    $imagenAlto = 320; 
     $imagen = imagecreate($imagenAncho, $imagenAlto);
 
     // Colores
@@ -45,37 +51,37 @@ if ($setup->db) {
     $negro = imagecolorallocate($imagen, 0, 0, 0);
     $azul = imagecolorallocate($imagen, 0, 0, 255);
 
-    // Datos del gráfico
-    $anchoBarra = 40; // Aumento el ancho de la barra para ajustar a los años
-    $espacio = 20;    // Aumento el espacio entre las barras
-    $base = $imagenAlto - 20;
+    
+    $fuenteArial = 'fonts/arial.ttf';
+
+    // Calcular el margen para centrar las barras
+    $margenIzquierdo = ($imagenAncho - $totalAnchoBarras) / 2;
+    $base = $imagenAlto - 40; // Ajuste de la base para dar espacio al texto
 
     $maxValue = max($ventasPorAno);
-    $x = 10; // Inicia el primer valor de x
+    $x = $margenIzquierdo;
 
     foreach ($ventasPorAno as $ano => $valor) {
         $x1 = $x;
-        $y1 = $base - ($valor / $maxValue) * ($imagenAlto - 40);
+        $y1 = $base - ($valor / $maxValue) * ($imagenAlto - 60); // Ajuste de la altura de las barras
         $x2 = $x + $anchoBarra;
         $y2 = $base;
         imagefilledrectangle($imagen, $x1, $y1, $x2, $y2, $azul);
-        imagestring($imagen, 2, $x1 + 5, $base + 5, $ano, $negro);
+        imagettftext($imagen, 10, 0, $x1 + 5, $base + 15, $negro, $fuenteArial, $ano);
         $x += $anchoBarra + $espacio;
     }
 
-    
     imagerectangle($imagen, 0, 0, $imagenAncho - 1, $imagenAlto - 1, $negro);
-    imagestring($imagen, 5, 5, 5, 'Grafico de Ventas del cliente: '.iconv('UTF-8', 'windows-1252', $nombre_cliente), $negro);
+    imagettftext($imagen, 14, 0, 5, 20, $negro, $fuenteArial, 'Grafico de Ventas del cliente: ' . $cliente);
 
     $imagePath = 'grafico.png';
     imagepng($imagen, $imagePath);
     imagedestroy($imagen);
 
-
     $pdf = new FPDF("P", "mm", "letter");
     $pdf->AddPage();
     $pdf->SetFont("Arial", "B", 12);
-    $pdf->Cell(190, 5, "Reporte de ventas de ".iconv('UTF-8', 'windows-1252', $nombre_cliente), 0, 1, "C");
+    $pdf->Cell(190, 5, "Reporte de ventas", 0, 1, "C");
     $pdf->Ln(2);
 
     $pdf->Cell(20, 5, "Numero", 1, 0, "C");
@@ -94,10 +100,10 @@ if ($setup->db) {
         $pdf->Cell(80, 5, iconv('UTF-8', 'windows-1252', $fila['razonsocial']), 1, 1, "C");
     }
 
-    // Insertar imagen
+    
     $pdf->Image($imagePath, 10, 150, 190, 0, 'PNG');
 
-    // Salida del PDF
+    
     $pdf->Output();
 
 } else {
