@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2024-07-16 03:33:38
+/* Smarty version 4.5.3, created on 2024-07-16 12:10:27
   from 'C:\Users\Deyber\Documents\Web\tecnologiaweb\html\form_reportes.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_66963062e9fb60_99232290',
+  'unifunc' => 'content_6696a983c06ad3_97199730',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b05ad4d8df3d932552827b12195e6d04ccf1ecbb' => 
     array (
       0 => 'C:\\Users\\Deyber\\Documents\\Web\\tecnologiaweb\\html\\form_reportes.html',
-      1 => 1721118817,
+      1 => 1721149826,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:menu_top.html' => 1,
   ),
 ),false)) {
-function content_66963062e9fb60_99232290 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6696a983c06ad3_97199730 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Deyber\\Documents\\Web\\tecnologiaweb\\smarty\\libs\\plugins\\function.html_options.php','function'=>'smarty_function_html_options',),));
 ?>
 <!DOCTYPE html>
@@ -88,6 +88,12 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Deyber\\Documents
                         </div>
                         <button type="submit" class="btn btn-primary">Generar reporte</button>
                     </form>
+                </div>
+            </div>
+            <div class="card mt-4">
+                <div class="card-header">REPRTE GRÁFICO GENERAL</div>
+                <div class="card-body">
+                    <a href="ReporteGeneral.php" class="btn btn-primary">GENREAR REPORTE</a>
                 </div>
             </div>
         </div>
