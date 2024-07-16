@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2024-07-16 03:10:29
+/* Smarty version 4.5.3, created on 2024-07-16 11:52:52
   from 'C:\Users\Deyber\Documents\Web\tecnologiaweb\html\menu_top.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_66962af56aa289_46946410',
+  'unifunc' => 'content_6696a564c19632_40220269',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '85d6e45851d39800b7bf46f1ae293c987c6e96ff' => 
     array (
       0 => 'C:\\Users\\Deyber\\Documents\\Web\\tecnologiaweb\\html\\menu_top.html',
-      1 => 1721117428,
+      1 => 1721148771,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_66962af56aa289_46946410 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6696a564c19632_40220269 (Smarty_Internal_Template $_smarty_tpl) {
 ?><header id="menu_top">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand font-weight-bold" href="#">GRUPO WEB</a>
@@ -32,7 +32,7 @@ function content_66962af56aa289_46946410 (Smarty_Internal_Template $_smarty_tpl)
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="clientes.php">Clientes <span class="sr-only">(current)</span></a>
@@ -48,6 +48,9 @@ function content_66962af56aa289_46946410 (Smarty_Internal_Template $_smarty_tpl)
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="reportes.php">Reportes <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="integrantes.html">Grupo <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
         </div>
