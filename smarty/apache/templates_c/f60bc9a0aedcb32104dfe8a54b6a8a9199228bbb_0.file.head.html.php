@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2024-07-16 11:53:52
+/* Smarty version 4.5.3, created on 2024-07-16 12:43:20
   from 'C:\Users\Deyber\Documents\Web\tecnologiaweb\html\head.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_6696a5a01a8b59_37242718',
+  'unifunc' => 'content_6696b1383d2bb4_93287143',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f60bc9a0aedcb32104dfe8a54b6a8a9199228bbb' => 
     array (
       0 => 'C:\\Users\\Deyber\\Documents\\Web\\tecnologiaweb\\html\\head.html',
-      1 => 1721148828,
+      1 => 1721151739,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6696a5a01a8b59_37242718 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6696b1383d2bb4_93287143 (Smarty_Internal_Template $_smarty_tpl) {
 ?><meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 <meta charset="UTF-8">
 <!-- <link rel="shortcut icon" href="images/favicon.png<?php echo $_smarty_tpl->tpl_vars['vars']->value['version'];?>
@@ -75,5 +75,12 @@ function content_6696a5a01a8b59_37242718 (Smarty_Internal_Template $_smarty_tpl)
 >
 <?php echo '<script'; ?>
  src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"><?php echo '</script'; ?>
-><?php }
+>
+
+<?php echo '<script'; ?>
+ src="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/alertify.min.js"><?php echo '</script'; ?>
+>
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/alertify.min.css"/>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/themes/default.min.css"/><?php }
 }

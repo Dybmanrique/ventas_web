@@ -24,19 +24,22 @@ function Editar(idventa) {
     window.location.href = 'ventas.php?mod=editar&idventa=' + idventa;
 }
 function Eliminar(idventa) {
-    if (!confirm('¿Seguro que desea eliminar?')) {
-        return false;
-    }
-    $.ajax({
-        type: "POST", url: 'ventas.php?&mod=eliminar&idventa=' + idventa,
-        success: function (result) {
-            if (result === 'Se ha eliminado corectamente.') {
-                alert('Se eliminó');
-                getVentas();
-            }
+    alertify.confirm("¿Esta seguro de eliminar?",
+        function () {
+            $.ajax({
+                type: "POST", url: 'ventas.php?&mod=eliminar&idventa=' + idventa,
+                success: function (result) {
+                    if (result === 'Se ha eliminado corectamente.') {
+                        alertify.success('Se eliminó');
+                        getVentas();
+                    }
 
+                },
+            });
         },
-    });
+        function () {
+            return;
+        });
 }
 
 $(document).ready(function () {
@@ -71,7 +74,7 @@ $(document).ready(function () {
         });
 
         if (detalles.length < 1) {
-            alert('Agrege productos')
+            alertify.warning('Agrege productos');
             return;
         }
 
@@ -89,7 +92,7 @@ $(document).ready(function () {
                 // Manejar la respuesta del servidor
                 respuesta = JSON.parse(response);
                 if (respuesta.code == 200) {
-                    alert(respuesta.message);
+                    alertify.success(respuesta.message);
                     if (isEdition == false) {
                         $("#frmClt")[0].reset();
                         numero = $("#numero").val();
@@ -127,33 +130,6 @@ $(document).ready(function () {
         igv = subtotal * 0.18;
         document.getElementById("igv").value = igv.toFixed(2);
         document.getElementById("total").value = parseFloat(subtotal + igv).toFixed(2);
-    });
-
-    $(document).on('click', '.ver-registro', (e) => {
-        const elemento = $(this)[0].activeElement.parentElement.parentElement;//accede a los caracteristicas del registro(guardados en un div)              
-        // let idVenta=$(elemento).attr("id");
-        // elementosFila=elemento.parentElement.parentElement;
-        // celdas=$(elementosFila).find("td");        
-        // let fecha=$(celdas[1]).text();
-        // let estado=$(celdas[2]).text();        
-        // let nComprobante=$(celdas[3]).text();
-        // let cliente=$(celdas[4]).text();
-        // let vendedor=$(celdas[5]).text();
-        // importe=$(celdas[6]).text();
-
-        // totalDetalleVenta= importe;
-        // $("#fecha-detalle").html(fecha);
-        // $("#nComprobante-detalle").html(nComprobante);
-        // $("#cliente-detalle").html(cliente);
-        // $("#vendedor-detalle").html(vendedor);
-        // $("#estado-detalle").html(estado);
-        // if(estado=="Activo"){
-        //     $("#estado-detalle").attr("class","badge badge-primary");
-        // }else{
-        //     $("#estado-detalle").attr("class","badge badge-danger");
-        // }
-        // buscarDetalleVenta(idVenta);
-        $("#modal-registros").modal("show");
     });
 });
 
@@ -210,14 +186,14 @@ function accederDatos(boton) {
 }
 
 function buscarDetalleVenta(idventa, total) {
-    
-    mod="getDetalleVentas";
-    $.post("ventas.php",{mod,idventa},(respuesta)=>{        
-        plantilla='';
-        resultados=JSON.parse(respuesta);
-        
+
+    mod = "getDetalleVentas";
+    $.post("ventas.php", { mod, idventa }, (respuesta) => {
+        plantilla = '';
+        resultados = JSON.parse(respuesta);
+
         resultados.forEach(registro => {
-            plantilla+=`                
+            plantilla += `                
                 <tr id="${registro.id}">
                 <td>${registro.producto}</td>                    
                 <td>${registro.precio}</td>                    
@@ -225,8 +201,8 @@ function buscarDetalleVenta(idventa, total) {
                     <td class="text-right">${registro.importe}</td>
                 </tr>
             `;
-        });        
-        plantilla+=`                
+        });
+        plantilla += `                
         <tr class="table-secondary">                   
             <td colspan="4" class="text-center font-weight-bold">Total: S/. ${total}</td>                    
         </tr>
