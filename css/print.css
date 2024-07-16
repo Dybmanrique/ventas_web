@@ -1,0 +1,17 @@
+body{margin: 10 0 10 0px;
+     text-align: center;
+     background-color: #ffffff;
+}
+#menu_top{visibility:hidden;
+          display: none;
+}
+#boton_imprimir{visibility:hidden;
+                display: none;
+}
+#no_print{visibility:hidden;
+          display: none;
+}
+.no_print{visibility:hidden;
+          display: none;
+}
+.invisible{visibility:hidden;}

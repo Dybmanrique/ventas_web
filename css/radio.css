@@ -1,0 +1,14 @@
+.radioBtns {
+    float: left;
+    width: 50%;
+}
+.radioBtns .styledRadio {
+    clear: both;
+    float: left;
+    margin: 0 6px 6px 0;
+}
+.radioBtns label {
+    display: block;
+    line-height: 43px;
+    margin-bottom: 6px;
+}
