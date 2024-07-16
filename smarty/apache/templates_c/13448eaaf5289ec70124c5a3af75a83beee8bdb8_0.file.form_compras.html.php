@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2024-07-16 12:30:48
+/* Smarty version 4.5.3, created on 2024-07-16 12:33:08
   from 'C:\Users\Deyber\Documents\Web\tecnologiaweb\html\form_compras.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_6696ae48c97453_11188608',
+  'unifunc' => 'content_6696aed4262d50_77722588',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '13448eaaf5289ec70124c5a3af75a83beee8bdb8' => 
     array (
       0 => 'C:\\Users\\Deyber\\Documents\\Web\\tecnologiaweb\\html\\form_compras.html',
-      1 => 1721151048,
+      1 => 1721151187,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:menu_top.html' => 1,
   ),
 ),false)) {
-function content_6696ae48c97453_11188608 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6696aed4262d50_77722588 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Deyber\\Documents\\Web\\tecnologiaweb\\smarty\\libs\\plugins\\function.html_options.php','function'=>'smarty_function_html_options',),));
 ?>
 <!DOCTYPE html>
@@ -120,10 +120,10 @@ echo $_smarty_tpl->tpl_vars['cr']->value['total'];
             </div>
         </div>
 
+        <div class="form-group">
+            <input type="search" id="bsc" placeholder="Buscar" title="Buscar" autofocus onkeyup="getCompras()" class="form-control"/>
+        </div>
         <table id="data" class="table table-striped table-sm">
-            <caption class="text-left p-2">
-                <input type="search" id="bsc" placeholder="Buscar" title="Buscar" autofocus onkeyup="getCompras()" class="mb-4 p-2 border border-gray-300 rounded-md w-full"/>
-            </caption>
             <thead>
                 <tr>
                     <th class="py-2 px-4 border-b border-gray-300 text-left">Fecha</th>

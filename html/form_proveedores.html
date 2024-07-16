@@ -54,17 +54,19 @@
                             </div>
                         </div>
                        
-                        <section style="clear: both; text-align: center">
-                            <input type="submit" id="bnguardar" name="mod" value="<{if isset($smarty.request.mod) eq editar}>Modificar<{else}>Insertar<{/if}>"/> &nbsp; 
-                            <input type="reset" value="Cancelar" onclick="window.location.href='<{$smarty.server.SCRIPT_NAME}>';"/>
-                        </section>
+                        <div class="text-center mt-3">
+                            <input type="submit" id="bnguardar" name="mod" class="btn btn-primary" value="<{if isset($smarty.request.mod) eq editar}>Modificar<{else}>Insertar<{/if}>"/>
+                            <input type="reset" value="Cancelar" class="btn btn-secondary" onclick="window.location.href='<{$smarty.server.SCRIPT_NAME}>';"/>
+                        </div>
                         
                     </form>
                 </div>
             </div>
             <br/>
+            <div class="form-group">
+                <input type="search" id="bsc" placeholder="Buscar" title="Buscar" autofocus onkeyup="getProveedores()" class="form-control"/>
+            </div>
             <table id="data" class="table table-striped table-sm">
-                <caption style="text-align:left"><input type="search" id="bsc" placeholder="Buscar" title="Buscar" autofocus onkeyup="getProveedores()"/></caption>
                 <thead><tr><th>PROVEEDORES</th><th>RUC / DNI</th><th>DIRECCION</th><th>TELEFÓNO</th><th>URL</th><th></th><th></th></tr></thead>
                 <tbody></tbody>
             </table>

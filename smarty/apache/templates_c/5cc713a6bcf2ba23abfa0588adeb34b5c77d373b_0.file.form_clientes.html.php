@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2024-07-16 12:21:19
+/* Smarty version 4.5.3, created on 2024-07-16 12:36:53
   from 'C:\Users\Deyber\Documents\Web\tecnologiaweb\html\form_clientes.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_6696ac0fc082c2_59536887',
+  'unifunc' => 'content_6696afb59f4817_34998546',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5cc713a6bcf2ba23abfa0588adeb34b5c77d373b' => 
     array (
       0 => 'C:\\Users\\Deyber\\Documents\\Web\\tecnologiaweb\\html\\form_clientes.html',
-      1 => 1721150479,
+      1 => 1721151412,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:menu_top.html' => 1,
   ),
 ),false)) {
-function content_6696ac0fc082c2_59536887 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6696afb59f4817_34998546 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Deyber\\Documents\\Web\\tecnologiaweb\\smarty\\libs\\plugins\\function.html_options.php','function'=>'smarty_function_html_options',),));
 ?>
 <!DOCTYPE html>
@@ -92,11 +92,12 @@ echo $_smarty_tpl->tpl_vars['ct']->value['celular'];
                                 </div>
                             </div>
                         </div>    
-                        <section style="clear: both; text-align: center">
-                            <input type="submit" id="bnguardar" name="mod" value="<?php if ((isset($_REQUEST['mod'])) == 'editar') {?>Modificar<?php } else { ?>Insertar<?php }?>"/> &nbsp; 
-                            <input type="reset" value="Cancelar" onclick="window.location.href='<?php echo $_SERVER['SCRIPT_NAME'];?>
+                        <div class="text-center mt-3">
+                            <input type="submit" id="bnguardar" name="mod" class="btn btn-primary" value="<?php if ((isset($_REQUEST['mod'])) == 'editar') {?>Modificar<?php } else { ?>Insertar<?php }?>"/>
+                            <input type="reset" value="Cancelar" class="btn btn-secondary" onclick="window.location.href='<?php echo $_SERVER['SCRIPT_NAME'];?>
 ';"/>
-                        </section>
+                        </div>
+                        
                     </form>
                 </div>
             </div>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2024-07-16 12:27:45
+/* Smarty version 4.5.3, created on 2024-07-16 12:37:53
   from 'C:\Users\Deyber\Documents\Web\tecnologiaweb\html\form_proveedores.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_6696ad91ec8138_24107971',
+  'unifunc' => 'content_6696aff1589b48_78884122',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '58f8812883e57cce8fdf0fca6dd2ea2b49129001' => 
     array (
       0 => 'C:\\Users\\Deyber\\Documents\\Web\\tecnologiaweb\\html\\form_proveedores.html',
-      1 => 1721150864,
+      1 => 1721151402,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:menu_top.html' => 1,
   ),
 ),false)) {
-function content_6696ad91ec8138_24107971 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6696aff1589b48_78884122 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Deyber\\Documents\\Web\\tecnologiaweb\\smarty\\libs\\plugins\\function.html_options.php','function'=>'smarty_function_html_options',),));
 ?>
 <!DOCTYPE html>
@@ -97,18 +97,20 @@ echo $_smarty_tpl->tpl_vars['ct']->value['celular'];
                             </div>
                         </div>
                        
-                        <section style="clear: both; text-align: center">
-                            <input type="submit" id="bnguardar" name="mod" value="<?php if ((isset($_REQUEST['mod'])) == 'editar') {?>Modificar<?php } else { ?>Insertar<?php }?>"/> &nbsp; 
-                            <input type="reset" value="Cancelar" onclick="window.location.href='<?php echo $_SERVER['SCRIPT_NAME'];?>
+                        <div class="text-center mt-3">
+                            <input type="submit" id="bnguardar" name="mod" class="btn btn-primary" value="<?php if ((isset($_REQUEST['mod'])) == 'editar') {?>Modificar<?php } else { ?>Insertar<?php }?>"/>
+                            <input type="reset" value="Cancelar" class="btn btn-secondary" onclick="window.location.href='<?php echo $_SERVER['SCRIPT_NAME'];?>
 ';"/>
-                        </section>
+                        </div>
                         
                     </form>
                 </div>
             </div>
             <br/>
+            <div class="form-group">
+                <input type="search" id="bsc" placeholder="Buscar" title="Buscar" autofocus onkeyup="getProveedores()" class="form-control"/>
+            </div>
             <table id="data" class="table table-striped table-sm">
-                <caption style="text-align:left"><input type="search" id="bsc" placeholder="Buscar" title="Buscar" autofocus onkeyup="getProveedores()"/></caption>
                 <thead><tr><th>PROVEEDORES</th><th>RUC / DNI</th><th>DIRECCION</th><th>TELEFÓNO</th><th>URL</th><th></th><th></th></tr></thead>
                 <tbody></tbody>
             </table>
