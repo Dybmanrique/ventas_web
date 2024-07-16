@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2024-07-15 18:08:07
+/* Smarty version 4.5.3, created on 2024-07-16 11:54:19
   from 'C:\Users\Deyber\Documents\Web\tecnologiaweb\html\form_compras.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_6695abd76e4421_72718164',
+  'unifunc' => 'content_6696a5bbc53220_57333927',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '13448eaaf5289ec70124c5a3af75a83beee8bdb8' => 
     array (
       0 => 'C:\\Users\\Deyber\\Documents\\Web\\tecnologiaweb\\html\\form_compras.html',
-      1 => 1720136761,
+      1 => 1721148854,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:menu_top.html' => 1,
   ),
 ),false)) {
-function content_6695abd76e4421_72718164 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6696a5bbc53220_57333927 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Deyber\\Documents\\Web\\tecnologiaweb\\smarty\\libs\\plugins\\function.html_options.php','function'=>'smarty_function_html_options',),));
 ?>
 <!DOCTYPE html>
@@ -33,7 +33,6 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Deyber\\Documents
     <title>Compras</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
     <style type="text/css">

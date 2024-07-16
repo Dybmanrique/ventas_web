@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2024-07-16 03:28:42
+/* Smarty version 4.5.3, created on 2024-07-16 11:53:57
   from 'C:\Users\Deyber\Documents\Web\tecnologiaweb\html\form_ventas.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_66962f3a155a35_67650663',
+  'unifunc' => 'content_6696a5a507a6a5_67655177',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c20ead3ab3a3e5ab9a4100b24ad7edde3b8c1cac' => 
     array (
       0 => 'C:\\Users\\Deyber\\Documents\\Web\\tecnologiaweb\\html\\form_ventas.html',
-      1 => 1721118520,
+      1 => 1721148822,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:menu_top.html' => 1,
   ),
 ),false)) {
-function content_66962f3a155a35_67650663 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6696a5a507a6a5_67655177 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Deyber\\Documents\\Web\\tecnologiaweb\\smarty\\libs\\plugins\\function.html_options.php','function'=>'smarty_function_html_options',),));
 ?>
 <!DOCTYPE html>
@@ -34,7 +34,6 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Deyber\\Documents
         <title>Ventas</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <?php echo '<script'; ?>
  type="text/javascript">
@@ -325,13 +324,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </tbody>
             </table>
         </div>
-
-        <?php echo '<script'; ?>
- src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"><?php echo '</script'; ?>
->
-        <?php echo '<script'; ?>
- src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"><?php echo '</script'; ?>
->
         <?php echo '<script'; ?>
  type="text/javascript" src="js/ventas.js<?php echo $_smarty_tpl->tpl_vars['vars']->value['version'];?>
 "><?php echo '</script'; ?>
