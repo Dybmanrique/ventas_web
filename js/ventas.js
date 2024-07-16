@@ -113,6 +113,21 @@ $(document).ready(function () {
     $('#form-producto').on('submit', function (event) {
         event.preventDefault(); // Prevenir el envío predeterminado del formulario
         idProducto = $('#idproducto').val();
+
+        // Verificar si el data-id ya existe en la tabla
+        let existe = false;
+        let filas = document.querySelectorAll('#detalle-venta tbody tr');
+        filas.forEach(function (fila) {
+            if (fila.getAttribute('data-id') === idProducto) {
+                existe = true;
+            }
+        });
+
+        if (existe){
+            alertify.warning('Ese producto ya está incluido');
+            return;
+        }
+
         producto = $('#idproducto').find('option:selected').text();
         precio = $('#precio').val();
         cantidad = $('#cantidad').val();
