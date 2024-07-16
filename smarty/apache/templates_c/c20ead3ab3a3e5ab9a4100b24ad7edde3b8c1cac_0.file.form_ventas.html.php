@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.5.3, created on 2024-07-16 11:53:57
+/* Smarty version 4.5.3, created on 2024-07-16 12:31:31
   from 'C:\Users\Deyber\Documents\Web\tecnologiaweb\html\form_ventas.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.5.3',
-  'unifunc' => 'content_6696a5a507a6a5_67655177',
+  'unifunc' => 'content_6696ae737c1d40_15335470',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c20ead3ab3a3e5ab9a4100b24ad7edde3b8c1cac' => 
     array (
       0 => 'C:\\Users\\Deyber\\Documents\\Web\\tecnologiaweb\\html\\form_ventas.html',
-      1 => 1721148822,
+      1 => 1721151090,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:menu_top.html' => 1,
   ),
 ),false)) {
-function content_6696a5a507a6a5_67655177 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6696ae737c1d40_15335470 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Deyber\\Documents\\Web\\tecnologiaweb\\smarty\\libs\\plugins\\function.html_options.php','function'=>'smarty_function_html_options',),));
 ?>
 <!DOCTYPE html>
@@ -165,7 +165,7 @@ $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\Users\\Deyber\\Documents
 
         <form id="frmClt" name="frmClt" class="container" method="post" action="<?php echo $_SERVER['REQUEST_URI'];?>
 ">
-            <div class="card mt-2">
+            <div class="card mt-4">
                 <div class="card-header">
                     Registro de ventas
                 </div>
